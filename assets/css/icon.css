@@ -1,0 +1,27 @@
+.icon {
+    --image-icon: url(); /* 參照 Mockup，可覆寫 */
+    --size-icon: 18px;
+    width: var(--size-icon);
+    height: var(--size-icon);
+    flex-shrink: 0; /* 防止 Icon 受到 Flex 容器壓縮 */
+    -webkit-mask: var(--image-icon) no-repeat center center / cover; /* 讓 Icon 填滿容器 */
+    background-color: currentColor; /* 顏色通常同相鄰字體顏色 */
+    cursor: pointer;
+  }
+  .icon.icon--colorful {
+    -webkit-mask: none;
+    background: var(--image-icon) no-repeat center center / cover;
+    background-color: transparent;
+  }
+  .icon--secondary {
+    color: var(--color-neutral-7);
+  }
+  .icon--secondary:hover {
+    color: var(--color-neutral-8);
+  }
+  .icon--primary {
+    color: var(--color-neutral-8);
+  }
+  .icon--primary:hover {
+    color: var(--color-neutral-9);
+  }

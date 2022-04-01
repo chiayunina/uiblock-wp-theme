@@ -1,0 +1,90 @@
+.textField {
+    --maxWidth-textField: none; /* 參照 Mockup，可覆寫 */
+    --height-textArea: 120px; /* 參照 Mockup，可覆寫 */
+    width: -webkit-fill-available;
+    max-width: var(--maxWidth-textField);
+    height: 36px;
+    display: flex; align-items: center; /* 內容物垂直置中 */
+    position: relative; /* 幫助 Icon 找到相對位置 */
+  }
+  .textField > .textField-input {
+    font: var(--font-body-s-400);
+    color: var(--color-neutral-9);
+    background-color: var(--color-surface);
+    padding: 0 12px; /* 元件內部之左右留空 12px */
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--color-neutral-5);
+    border-radius: 4px;
+    outline: inherit; /* 洗掉輸入框預設的樣式 */
+    box-sizing: border-box;
+  }
+  .textField > .icon {
+    position: absolute; /* Icon 位置相對於 textField */
+  }
+  .textField.textField--withLeftIcon > .icon {
+    color: var(--color-neutral-7); /* 左邊 Icon 的顏色 */
+    left: 12px; /* 左 Icon 與左邊的間距 */
+    cursor: default;
+  }
+  .textField.textField--withLeftIcon > input {
+    padding-left: 38px; /* 具有左 Icon 的 Input 之內文與左邊的間距 */
+  }
+  .textField.textField--withRightIcon > .icon {
+    right: 12px; /* 右 Icon 與右邊的間距 */
+  }
+  .textField.textField--withRightIcon > input {
+    padding-right: 38px; /* 具有右 Icon 的 Input 之內文與右邊的間距 */
+  }
+  .textField > .textField-input::placeholder {
+    color: var(--color-neutral-7);
+  }
+  .textField:hover > .textField-input {
+    border-color: var(--color-neutral-6);
+  }
+  .textField > .textField-input:focus {
+    border-color: var(--color-primary-6);
+  }
+  .textField > .textField-input:disabled {
+    background-color: var(--color-neutral-2);
+    color: var(--color-neutral-6);
+  }
+  .textField.textField--sm {
+    height: 32px;
+  }
+  .textField.textField--lg {
+    height: 40px;
+  }
+  .textField.textField--lg > .textField-input {
+    font: var(--font-body-m-400);
+  }
+  .textField.textField--lg > .icon {
+    --size-icon: 24px;
+  }
+  .textField.textField--lg.textField--withLeftIcon > input {
+    padding-left: 44px; /* 具有左 Icon 的 Input 之內文與左邊的間距 */
+  }
+  .textField.textField--lg.textField--withRightIcon > input {
+    padding-right: 44px; /* 具有右 Icon 的 Input 之內文與右邊的間距 */
+  }
+  .textField.textField--highlight > input:focus + .icon {
+    color: var(--color-primary-6);
+  }
+  .textField.textField--highlight > input:focus + .icon:hover {
+    color: var(--color-primary-5);
+  }
+  .textField.textField--rounded > input {
+    border-radius: 24px;
+  }
+  .textField.textField--withRightIcon.textField--rounded > input {
+    padding-left: 20px; /* Rounded textField 與其中文字之最小間距 */
+  }
+  .textField.textField--multiline {
+    height: var(--height-textArea);
+  }
+  .textField--multiline > textarea.textField-input {
+    font: var(--font-body-m-400);
+    padding-top: 8px;
+    min-height: 80px;
+    resize: vertical;
+  }

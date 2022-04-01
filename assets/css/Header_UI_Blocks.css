@@ -1,0 +1,259 @@
+/* For Demo Start */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--font-family);
+    color: var(--color-neutral-9);
+    --size-root: 8px; 
+    /* 可複寫影響 Size Token */
+}
+
+#theme_Switch{
+    position: fixed;
+    bottom:64px;
+    right: 48px;
+    user-select: none;
+}
+
+/* For Demo End */
+.dFlex{
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+}
+
+/* Header General */
+.header {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    padding: var(--size-250) 0;
+    gap: var(--size-250) var(--size-500);
+    background: var(--color-bg-canvas);
+    padding: var(--size-250) var(--size-500);
+}
+
+.header>div {
+    display: flex;
+    align-items: center;
+}
+
+.header i {
+    font-size: 24px;
+}
+
+.logo_Type {
+    display: flex;
+    /* font-family: 'Roboto'; */
+    align-items: center;
+    gap: 0 16px;
+}
+
+.main_Type {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--color-neutral-9);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.main_Type i {
+    font-size: 48px;
+}
+
+.main_Type::after {
+    width: 1px;
+    height: 20px;
+    background: var(--color-neutral-5);
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: calc(50% - 10px);
+}
+
+.sub_Type {
+    font-weight: normal;
+    font-size: 12px;
+    width: 125px;
+    color: var(--color-neutral-8);
+}
+
+.sub_Type.TC {
+    font: var(--font-body-l-500);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    cursor: pointer;
+}
+
+.user_Name {
+    font: var(--font-body-m-400);
+    text-align: right;
+    width: 160px;
+}
+
+.avatar {
+    --backgroundImage-avatar: url(https://i.imgur.com/ipZFjSe.jpg);
+}
+
+.function_Row{
+    width:100%;
+}
+
+/* Header Type A */
+
+.header_TypeA {
+    grid-template-columns: auto 1fr 200px auto auto;
+}
+
+.header_TypeA .menu_Group {
+    gap: 20px;
+}
+
+.header_TypeA .menu{
+    flex: unset;
+}
+
+/* Header Type B */
+
+.header_TypeB {
+    grid-template-columns: auto 200px 1fr 24px;
+}
+
+.header_TypeB .menu_Group {
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.header_TypeB .menu{
+    flex: unset;
+}
+
+html .logo i{
+    color: var(--color-neutral-9);
+}
+
+html i.Iconfont_Icon_iCharity {
+    color: var(--color-tsmc-6);
+}
+
+html.dark i.Iconfont_Icon_iCharity {
+    color: #FFF;
+}
+
+/* Header Type B */
+.header_TypeC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+}
+
+/* Header Type C */
+.header_TypeC .function_Row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 20px 12px;
+    border-top: 1px solid var(--color-neutral-5);
+    border-bottom: 1px solid var(--color-neutral-5);
+    flex-wrap: wrap;
+}
+
+.header_TypeC .menu_Group{
+    width:auto;
+    gap: 0 20px;
+}
+
+.header_TypeC .textField{
+    width: 280px;
+}
+
+/* Header Type D */
+.header_TypeD .header_Top{
+    display: grid;
+    grid-template-columns: 1fr 280px 160px;
+    gap: 0 12px;
+}
+
+@media screen and (max-width:767px){
+    .header_TypeD .header_Top{
+        display: flex;
+    }
+    .header_TypeD .main_Type::after{
+        width: 0;
+    }
+    .header_TypeD .sub_Type{
+        display: none;
+    }
+    .header_TypeD .user_Name{
+        display: none;
+    }
+}
+
+/* Header Type E */
+.header_TypeE .header_Top{
+    justify-content: space-between;
+}
+
+.header_TypeE .textField{
+    max-width:800px;
+}
+
+.header_TypeE .header_Top i{
+    text-align: right;
+}
+
+.header_TypeE .megaMenu_TypeB{
+    margin:0 -20px;
+    width: unset;
+}
+
+/* Header Type F */
+.header_TypeF.header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header_TypeF .header_Top{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header_TypeF .logo_Type{
+    gap:0;
+}
+.header_TypeF .logo_Type i{
+    font-size:60px;
+}
+.header_TypeF .logo_Type_Vertical{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.header_TypeF .main_Type{
+    white-space: nowrap;
+}
+
+.header_TypeF .main_Type::after{
+    display: none;
+}
+
+.header_TypeF .textField{
+    max-width: 280px;
+}
+
+@media screen and (max-width:1280px){
+    .header_TypeE .textField{
+        max-width:280px;
+    }
+}

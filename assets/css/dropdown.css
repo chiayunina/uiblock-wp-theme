@@ -1,0 +1,72 @@
+.dropdown {
+    --width-dropdown: fit-content; /* 參照 Mockup，可覆寫 */
+    --minWidth-dropdown-menu: 200px; /* 參照 Mockup，可覆寫 */
+    --maxHeight-dropdown-menu: var(--minWidth-dropdown-menu); /* 參照 Mockup，可覆寫 */
+    position: relative; /* 幫助 Dropdown menu 找到相對位置 */
+    width: var(--width-dropdown);
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px); /* 與觸發元件之距離為 8px */
+    left: 0;
+    padding: 8px 0; /* 元件內部之上下留空 8px */
+    border-radius: 4px;
+    background-color: var(--color-surface-opaque);
+    box-shadow: var(--elevation-8px-focus);
+    border: 1px solid var(--color-neutral-5);
+    width: 100%; /* 寬度取決於觸發元件 */
+    min-width: var(--minWidth-dropdown-menu);
+    max-height: var(--maxHeight-dropdown-menu);
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .dropdown-item {
+    padding: 0 12px; /* 元件內部之左右留空 12px */
+    font: var(--font-body-s-400);
+    height: 36px;
+    color: var(--color-neutral-9);
+    display: flex; align-items: center; /* 內容物垂直置中 */
+    cursor: pointer;
+    user-select: none;
+  }
+  .dropdown-item > :not(:last-child) {
+    margin-right: 8px; /* 內容物彼此的間距 */
+  }
+  .dropdown-item:hover {
+    background-color: var(--color-neutral-2);
+  }
+  .dropdown-item.is-selected {
+    color: var(--color-primary-6);
+    background-color: var(--color-primary-1);
+  }
+  .dropdown-toggle,
+  .dropdown-toggle input {
+    cursor: pointer;
+  }
+  .dropdown--sm .dropdown-item {
+    height: 32px;
+  }
+  .dropdown--lg .dropdown-item {
+    font: var(--font-body-m-400);
+    height: 40px;
+  }
+  .dropdown--lg .dropdown-arrow {
+    --size-icon: 24px;
+  }
+  .dropdown--itemsEnd .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .dropdown:not(.is-open) .dropdown-menu {
+    position: absolute; top: -9999px; left: -9999px; /* 隱藏 */
+  }
+  .dropdown.is-open .dropdown-arrow {
+    transform: rotate(180deg); /* Dropdown menu 開啟時，觸發元件的指向 icon 之旋轉度數 */
+  }
+  .dropdown.is-open .dropdown-toggle > input {
+    border-color: var(--color-primary-6);
+  }
+  .with-dropdown.dropdown-is-open {
+    overflow: inherit; /* 使 with-dropdown 之元件內部的 Dropdown Menu 在具有 dropdown-is-open Class 溢出仍能展示 */
+  }

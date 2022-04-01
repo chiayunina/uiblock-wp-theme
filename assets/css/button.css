@@ -1,0 +1,136 @@
+button.btn {
+    --width-btn: fit-content; /* 參照 Mockup，可覆寫 */
+    font: var(--font-body-s-500);
+    height: 36px;
+    width: var(--width-btn);
+    display: flex; justify-content: center; align-items: center; /* 內容物置中 */
+    padding: 0 12px; /* 內部之左右留空 12px */
+    box-sizing: border-box;
+    border-width: 0; /* 洗掉按鈕預設的樣式 */
+    outline: inherit; /* 洗掉按鈕預設的樣式 */
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button > :not(:last-child) {
+    margin-right: 4px; /* 內容物彼此的間距 */
+  }
+  .btn-label {
+    padding: 0 4px; /* 無論 Icon 出現與否，都能確保 Label 與邊界留有 16px 的距離，且與 Icon 間距 8px */
+  }
+  button.btn--sm {
+    height: 32px;
+  }
+  button.btn--lg {
+    font: var(--font-body-m-500);
+    height: 40px;
+  }
+  button.btn--lg > .icon {
+    --size-icon: 24px;
+  }
+  button.btn--primary {
+    background-color: var(--color-primary-6);
+    color: var(--color-white-9);
+  }
+  button.btn--primary:hover,
+  button.btn--primary:focus {
+    background-color: var(--color-primary-hover);
+  }
+  button.btn--primary:active {
+    background-color: var(--color-primary-click);
+  }
+  button.btn--primary:disabled {
+    background-color: var(--color-neutral-2);
+    color: var(--color-neutral-6);
+  }
+  button.btn--secondary {
+    background-color: var(--color-surface);
+    color: var(--color-neutral-9);
+    border: 1px solid var(--color-neutral-5);
+  }
+  button.btn--secondary:hover,
+  button.btn--secondary:focus {
+    color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+  button.btn--secondary:active {
+    color: var(--color-primary-click);
+    border-color: var(--color-primary-click);
+  }
+  button.btn--secondary:disabled {
+    background-color: transparent;
+    color: var(--color-neutral-6);
+  }
+  button.btn--checked {
+    background-color: var(--color-primary-1);
+    color: var(--color-primary-6);
+  }
+  button.btn--checked:hover,
+  button.btn--checked:focus {
+    color: var(--color-primary-hover);
+  }
+  button.btn--checked:active {
+    color: var(--color-primary-click);
+  }
+  button.btn--checked:disabled {
+    background-color: var(--color-neutral-2);
+    color: var(--color-neutral-6);
+  }
+  button.btn--link {
+    background-color: transparent;
+    color: var(--color-primary-6);
+  }
+  button.btn--link:hover,
+  button.btn--link:focus {
+    color: var(--color-primary-hover);
+  }
+  button.btn--link:active {
+    color: var(--color-primary-click);
+  }
+  button.btn--link:disabled {
+    color: var(--color-neutral-6);
+  }
+  button.btn--text {
+    background-color: transparent;
+    color: var(--color-neutral-9);
+  }
+  button.btn--text:hover,
+  button.btn--text:focus {
+    background-color: var(--color-neutral-1);
+  }
+  button.btn--text:active {
+    background-color: var(--color-neutral-2);
+  }
+  button.btn--text:disabled {
+    color: var(--color-neutral-6);
+  }
+  button.btn--danger {
+    background-color: var(--color-error-6);
+    color: var(--color-white-9);
+  }
+  button.btn--danger:hover,
+  button.btn--danger:focus {
+    background-color: var(--color-error-hover);
+  }
+  button.btn--danger:active {
+    background-color: var(--color-error-click);
+  }
+  button.btn--danger:disabled {
+    background-color: var(--color-neutral-2);
+    color: var(--color-neutral-6);
+  }
+  button.btn.btn--iconOnly {
+    padding: 0;
+    width: 36px;
+  }
+  button.btn--sm.btn--iconOnly {
+    width: 32px;
+  }
+  button.btn--lg.btn--iconOnly {
+    width: 40px;
+  }
+  .btnGroup {
+    display: flex; align-items: center; /* 內容物垂直置中 */
+  }
+  .btnGroup > :not(:last-child) {
+    margin-right: 8px; /* 內容物彼此的間距 */
+  }
